@@ -6,8 +6,9 @@ while IFS= read -r var
 do
   WORD="${var%%.*}"
   echo $WORD
-  echo "https://www.dictionary.com/browse/${WORD}"
-  echo "https://dictionary.cambridge.org/dictionary/english/${WORD}"
+  # echo "https://www.dictionary.com/browse/${WORD}"
+  # this works for cambridge
+  python python_script.py $WORD
 
 done < "$input"
 

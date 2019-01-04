@@ -8,4 +8,4 @@ document.querySelectorAll('span[title*="terrible"]');
 dictionary.com
 https://www.dictionary.com/browse/terrible 
 document.getElementsByTagName('audio’); 
-// returns two with <audio><source src=‘absPath’ /></audio>
+// returns two <audio><source src=‘absPath’ /></audio>
