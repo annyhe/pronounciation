@@ -18,7 +18,7 @@ soup = bs4.BeautifulSoup(res.text)
 
 # Find the spans with matching attributes
 # for dictionary.com
-comicElem = soup.select('audio source');
+comicElem = soup.select('audio source')
 if comicElem == []:
     print('Could not find comic image.')
 else:

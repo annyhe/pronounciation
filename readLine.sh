@@ -7,8 +7,9 @@ do
   WORD="${var%%.*}"
   echo $WORD
   # echo "https://www.dictionary.com/browse/${WORD}"
-  # this works for cambridge
-  python python_script.py $WORD
+  # this works for dictionary
+  # python python_script.py $WORD
+  python cam.py $WORD
 
 done < "$input"
 
