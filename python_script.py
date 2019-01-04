@@ -22,20 +22,18 @@ comicElem = soup.select('audio source')
 if comicElem == []:
     print('Could not find comic image.')
 else:
-    i = 0
-    # limit to 2
-    while i < 2: 
-        print(comicElem[i])
-        comicUrl = comicElem[i].get('src')
-        # Download the image.
-        print('Downloading image %s...' % (comicUrl))
-        res = requests.get(comicUrl)
-        res.raise_for_status()
+    # comicElem = [.ogg, .mp3]
+    filename = WORD + '.mp3'
+    print(comicElem[1])
+    comicUrl = comicElem[1].get('src')
+    # Download the image.
+    print('Downloading image %s...' % (comicUrl))
+    res = requests.get(comicUrl)
+    res.raise_for_status()
 
-        # Save the image to ./dictionary.
-        imageFile = open(os.path.join('dictionary', os.path.basename(comicUrl)), 'wb')
-        for chunk in res.iter_content(100000):
-            imageFile.write(chunk)
-        imageFile.close()    
-        i += 1
+    # Save the image to ./dictionary.
+    imageFile = open(os.path.join('dictionary', filename), 'wb')
+    for chunk in res.iter_content(100000):
+        imageFile.write(chunk)
+    imageFile.close()    
 

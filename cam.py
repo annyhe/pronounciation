@@ -3,6 +3,7 @@ import sys
 import os
 from bs4 import BeautifulSoup
 
+# run with 'python cam.py terrible'
 os.makedirs('cambridge', exist_ok=True) 
 WORD = sys.argv[1]
 url = 'https://dictionary.cambridge.org/dictionary/english/' + WORD

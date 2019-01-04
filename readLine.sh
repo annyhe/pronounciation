@@ -6,10 +6,10 @@ while IFS= read -r var
 do
   WORD="${var%%.*}"
   echo $WORD
-  # echo "https://www.dictionary.com/browse/${WORD}"
-  # this works for dictionary
-  # python python_script.py $WORD
-  python cam.py $WORD
+  # works for dictionary.com
+  python python_script.py $WORD
+  # works for cambridge
+  # python cam.py $WORD
 
 done < "$input"
 
